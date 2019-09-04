@@ -1,0 +1,93 @@
+#heading{
+    width:100%;
+    height:150px;
+    background-color:#EBF5FB;
+}
+body {
+    padding:0px;
+    margin:0px;
+}
+img.style-one{
+    vertical-align:middle;
+}
+#title-div{
+    float:left; /*设置可浮动-margin才能有效*/
+    text-align: left;
+    width:90%;
+    background-color:#EBF5FB;
+    margin-top:35px;
+    margin-left:100px;
+    font-size: 50px;
+    color: #AAB7B8;/*$*/
+    font-family: "Microsoft Yahei";
+    letter-spacing: 0;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+}
+#menu{
+    width:100%;
+    height:50px;
+    background-color:#85C1E9;
+    z-index:1;		/* 设置元素堆叠顺序，保证菜单能出现在最前端 */
+}
+#menu ul{
+    margin:0px;        /* 去除外边距，使其能够紧贴<div>边缘 */
+    padding:0px;    /* 去除内边距，使其能够紧贴<div>边缘 */
+    list-style-type:none;  /* 去除无序列表的标识符 */
+}
+#menu li{
+    float:left;    /* 设置左浮动，让它列表项的方向变成水平方向 */
+    background-color:#85C1E9;         /* 设置背景颜色 */
+    text-align:center;    /* 设置水平对齐方式为居中 */
+    width:150px;          /* 设置固定宽度 */
+    border-right:solid 2px #FFFFFF;    /* 设置右边框作为分割标签的标志 */
+}
+#menu ul li:hover{
+    background-color:rgb(65, 64, 64);
+}
+#menu a{
+    /*display的值，none表示不被显示；block表示显示为块级元素，元素前后
+    有换行符；inline为默认值，内联元素，前后没有换行符……*/
+    display:block;            /* 转换为块级元素，为了让点击范围能够扩充到整个<li>区域 */
+    line-height:50px;         /* 设置内边距让文字垂直居中。 */
+    color:#FFFFFF;            /* 修改文字初始颜色 */
+    text-decoration:none;    /* 去除<a>标签的下划线 */
+    font-size:25px;
+
+}
+/*鼠标无动作时不显示*/
+#menu ul li ul{
+    display:none;
+}
+/*当鼠标指向第一级li时，第二级ul的动作*/
+#menu ul li:hover ul{
+    display:list-item;
+}
+#menu ul li:hover ul li a:hover{
+    background:rgb(65, 64, 64);
+    color:white;
+    border-right:solid 1px #FFFFFF;    /* 设置右边框作为分割标签的标志 */
+}
+/* 隐藏所有二级菜单 */
+ul.dropdown-content {
+     display:none;       /* 设置显示属性为none */
+ }
+li#exit{
+    float:right;	/* 将"百度"这个列表项放置在最右端 */
+	border-right:transparent;	/* 去除在横向标签设置的用于分隔标签的右侧边框 */
+	border-left:solid 2px #FFFFFF; /* 改成左侧边框 */
+	width:100px;	/* 设置固定宽度 */
+	background-color:#85C1E9;	/* 设置背景颜色 */
+	/* 文字颜色用默认的<a>标签设置的白色，这里就不再设置文字颜色 */
+}
+li#exit:hover a{ /*注销悬停效果*/
+    color:blue;
+}
+#right{
+    width:100%;
+    height:500px;
+    text-align:center;
+}
+#find{ /*select下拉列表样式*/
+    font-size:18px;
+    text-align-last: center;
+}

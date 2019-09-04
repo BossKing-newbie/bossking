@@ -1,0 +1,164 @@
+body{
+ margin:0px;
+ padding:0px;
+}
+#left{
+    height: 760px; width: 200px; float: left;background: #e9e7ef;text-align:center;
+}
+#right{
+    height: 760px; width: 200px; float: right;background: #e9e7ef;text-align:center;
+}
+#main{
+    height: 760px; margin:0 200px; 
+}
+#headfont{
+    margin:0px;text-align:center;
+    background:#e9e7ef;
+    font-size: 40px;
+    color: #F4D03F;
+    font-family: "Microsoft Yahei";
+    letter-spacing: 0;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135 
+}
+#index-top{
+    z-index:1;		/* 设置元素堆叠顺序，保证菜单能出现在最前端 */
+    height: 60px; 
+    background:#e9f1f6;
+}
+#index-top ul{
+    margin:0px;        /* 去除外边距，使其能够紧贴<div>边缘 */
+    padding:0px;    /* 去除内边距，使其能够紧贴<div>边缘 */
+    list-style-type:none;  /* 去除无序列表的标识符 */
+}
+#index-top li{
+    float:left;    /* 设置左浮动，让它列表项的方向变成水平方向 */
+    background-color:#e9f1f6;         /* 设置背景颜色 */
+    text-align:center;    /* 设置水平对齐方式为居中 */
+    width:150px;          /* 设置固定宽度 */
+    border-right:solid 1px #F5CBA7;/*设置右边框作为分割标签的标志 */
+    font-size:20px;
+}
+#index-top a{
+    /*display的值，none表示不被显示；block表示显示为块级元素，元素前后
+    有换行符；inline为默认值，内联元素，前后没有换行符……*/
+    display:block;            /* 转换为块级元素，为了让点击范围能够扩充到整个<li>区域 */
+    line-height:60px;         /* 设置内边距让文字垂直居中。 */
+    color:#DC7633;            /* 修改文字初始颜色 */
+    text-decoration:none;    /* 去除<a>标签的下划线 */
+    font-size:25px;
+    font-weight: bold;
+}
+#index-top li:hover{
+    background-color:rgb(65, 64, 64);
+}
+.left-wrap{
+    z-index:1;
+    width:150px;background-color:#e9f1f6;height:83%;margin:0px;  
+    float:left;
+}
+.left-wrap *{
+    margin:0px 0px 0px 0px;padding:0px;
+}
+.header{
+    font-size:20px;
+    height:30px;
+    text-align:center;
+    padding:10px 0;
+    background-color:#00B8F5;
+    border-top:1px solid white;
+}
+.nav{
+    margin:0px 0px; 
+}
+.nav ul{
+    list-style-type:none; /* 去除无序列表的标识符 */
+}
+.nav-list h2{
+    height:20px;
+    background-color:#c2ccd0;
+    text-align:center;
+    font-size:15px;
+    padding:10px 0;
+    position: relative;
+    cursor: pointer;
+    border-top:1px solid #00B8F5;
+}
+.nav-list h2:hover{
+    background-color:#FFCC33;
+}
+.nav-list i{
+    position: absolute;
+    right:0;
+    top:13px;
+    border:8px solid transparent;
+    border-left:8px solid white;
+    transform-origin: 1px 4px;
+    transition:0.5s;
+}
+.nav-list i.on{
+    transform:rotate(90deg);
+}
+.hide{
+    overflow: hidden;
+    transition:0.5s;
+}
+.hide h5{
+    height:15px;
+    text-align:center;
+    font-size:10px;
+    padding:10px 0;
+    background-color:#00BFFF;
+    border:1px solid white;
+}
+.hide h5:hover{
+    background:#CCFF33;
+}
+.hide a{
+    cursor: pointer;
+    font-size:13px;
+    text-decoration:none;
+    color:black;
+}
+li#exit{
+    float:right;
+    border-right:transparent;
+    border-left:1px solid white;
+}
+.right-main{
+    float:right;
+    width:968px;
+    background-color:black;
+    margin:0px 0px 0px 0px;
+    padding:0px;
+    border-right:1px solid white;
+}
+.right-main *{
+    margin:0px 0px 0px 0px;
+    padding:0px;
+}
+.information{
+    background-color:#f0f0f4;
+    height:640px;
+}
+.information h4{
+    text-align:center;
+    font-size:17px;
+    padding:5px;
+    color:rgb(220,118,57);
+    background-color:#c2ccd0;
+    border:1px solid white;
+    border-right:transparent;
+    cursor:pointer;
+}
+.information h4:hover{
+    background:#CCFF33;
+}
+.infor-list{
+    padding-left:400px;
+    text-align:left;
+    font-size:20px;
+    line-height:35px;
+}
+/*.infor-list img{
+    vertical-align:middle;
+}*/

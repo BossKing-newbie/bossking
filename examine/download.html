@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>大数据作业管理系统</title>
+    <link href="../styles/examine.css" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="../images/country.ico" type="image/x-icon">
+</head>
+<style>
+    .table {
+        width: 950px;
+        height: 400px;
+        position: absolute;
+        top: 100px;
+        left: 150px;
+        filter: alpha(Opacity=80);
+        -moz-opacity: 0.8;
+        opacity: 0.8;
+        border: 1px solid red;
+        background: white;
+    }
+
+    #datetime {
+        text-align: center;
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    
+</style>
+
+<body>
+    <div>
+        <div class="heading">
+            <img src="../images/homework.png" style="vertical-align:middle;padding:10px 30px;">管理系统
+            <a href="examine.html" class="a1"><span>返回首页</span></a>
+            <a href="#" class="a2"><span>注销登录</span></a>
+            <span style="float:right;">
+                <img src="../images/boy64px.png"
+                    style="vertical-align:middle;padding:10px 10px;width:50px;height:50px;border-radius: 50%;cursor: pointer;"
+                    title="您">
+            </span>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div class="header">菜单列表</div>
+                <div class="nav">
+                    <ul>
+                        <li class="nav-list">
+                            <h2>
+                                <img src="../images/person.png">
+                                基本信息
+                            </h2>
+                            <div class="hide">
+                                <h5><a href="examine.html"><i></i>个人信息</a></h5>
+                                <h5><a href="changepwd.html"><i></i>修改密码</a></h5>
+                                <h5><a href="changeinfor.html"><i></i>修改个人资料</a></h5>
+                            </div>
+                            <h2>
+                                <img src="../images/ho.png">
+                                作业情况
+                            </h2>
+                            <div class="hide">
+                                <h5><a href="download.html"><i></i>提交作业</a></h5>
+                                <h5><a href="#"><i></i>查看作业成绩</a></h5>
+                                <h5><a href="#"><i></i>查看老师布置作业</a></h5>
+                            </div>
+                            <h2>
+                                <img src="../images/teachers.png">
+                                交流
+                            </h2>
+                            <div class="hide">
+                                <h5><a href="#"><i></i>师生交流</a></h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="top">
+                    <a href="examine.html"><img src="../images/home.png">首页</a>
+                    &emsp;/
+                    <a href="download.html">提交作业</a>
+                    &emsp;/
+                    当前院校：
+                    <a href="http://web.fosu.edu.cn">佛山科学技术学院</a>
+                </div>
+                <div class="table">
+                    <p id="datetime"></p>
+                    <table style="width: 100%;border-collapse: collapse;">
+                        <tr>
+                            <th style="border: 1px solid #98bf21;text-align: center;font-size: 1.1em;padding-top: 5px;padding-bottom: 4px;background-color: #A7C942;color: #ffffff;">
+                                作业序列号
+                            </th>
+                            <th style="border: 1px solid #98bf21;text-align: center;font-size: 1.1em;padding-top: 5px;padding-bottom: 4px;background-color: #A7C942;color: #ffffff;">
+                                作业题目
+                            </th>
+                            <th style="border: 1px solid #98bf21;text-align: center;font-size: 1.1em;padding-top: 5px;padding-bottom: 4px;background-color: #A7C942;color: #ffffff;">
+                                上传时间
+                            </th>
+                            <th style="border: 1px solid #98bf21;text-align: center;font-size: 1.1em;padding-top: 5px;padding-bottom: 4px;background-color: #A7C942;color: #ffffff;">
+                                提交时间
+                            </th>
+                            <th style="border: 1px solid #98bf21;text-align: center;font-size: 1.1em;padding-top: 5px;padding-bottom: 4px;background-color: #A7C942;color: #ffffff;">
+                                上传人
+                            </th>
+                            <th style="border: 1px solid #98bf21;text-align: center;font-size: 1.1em;padding-top: 5px;padding-bottom: 4px;background-color: #A7C942;color: #ffffff;">
+                                操作
+                            </th>
+                            <th style="border: 1px solid #98bf21;text-align: center;font-size: 1.1em;padding-top: 5px;padding-bottom: 4px;background-color: #A7C942;color: #ffffff;">
+                                附件
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 1em;border: 1px solid #98bf21;padding: 3px 7px 2px 7px;text-align: center;">T26V46Xi293gqJt</td>
+                            <td style="font-size: 1em;border: 1px solid #98bf21;padding: 3px 7px 2px 7px;text-align: center;">什么是javaBean?作业要求：100字</td>
+                            <td style="font-size: 1em;border: 1px solid #98bf21;padding: 3px 7px 2px 7px;text-align: center;">2019-08-04</td>
+                            <td style="font-size: 1em;border: 1px solid #98bf21;padding: 3px 7px 2px 7px;text-align: center;">2019-08-05 00:00:00</td>
+                            <td style="font-size: 1em;border: 1px solid #98bf21;padding: 3px 7px 2px 7px;text-align: center;">许红龙</td>
+                            <td style="font-size: 1em;border: 1px solid #98bf21;padding: 3px 7px 2px 7px;text-align: center;"><a>查看</a></td>
+                            <td style="font-size: 1em;border: 1px solid #98bf21;padding: 3px 7px 2px 7px;text-align: center;">无</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 1em;border: 1px solid #98bf21;padding: 3px 7px 2px 7px;text-align: center;color: #000000;background-color: #EAF2D3;">
+                                Baidu
+                            </td>
+                            <td style="font-size: 1em;border: 1px solid #98bf21;padding: 3px 7px 2px 7px;text-align: center;color: #000000;background-color: #EAF2D3;">
+                                Li YanHong
+                            </td>
+                            <td style="font-size: 1em;border: 1px solid #98bf21;padding: 3px 7px 2px 7px;text-align: center;color: #000000;background-color: #EAF2D3;">
+                                China
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function time() {
+            var weeklist = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期天"];
+            var date = new Date();
+            var year = date.getFullYear(), month = date.getMonth() + 1, day = date.getDate(), hours = date.getHours(), minutes = date.getMinutes(), seconds = date.getSeconds(), week = date.getDay();
+            if ((seconds + '').length == 1) {
+                seconds = '0' + (seconds + '');
+            }
+            document.getElementById("datetime").innerHTML = year + "年" + month + "月" + day + "日" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + weeklist[week];
+        }
+        setInterval("time()", 100);
+    </script>
+    <script src="../scripts/examine.js" async></script>
+</body>
+
+</html>

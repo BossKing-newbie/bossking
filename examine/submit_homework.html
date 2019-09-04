@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>大数据作业管理系统</title>
+    <link href="../styles/examine.css" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="../images/country.ico" type="image/x-icon">
+</head>
+<style>
+    .cont {
+        float: right;
+        width: 1268px;
+        height: 100%;
+        position: relative;
+        background: url("../images/url1.png") no-repeat;
+        background-size: cover;
+    }
+
+    .area {
+        width: 550px;
+        height: 500px;
+        position: absolute;
+        top: 100px;
+        left: 300px;
+        filter: alpha(Opacity=80);
+        -moz-opacity: 0.8;
+        opacity: 0.8;
+
+        background: white;
+    }
+
+    #datetime {
+        text-align: center;
+        font-size: 15px;
+        line-height: 35px;
+        font-weight: bold;
+    }
+
+    .text {
+        width: 500px;
+        height: 300px;
+        font-size: 20px;
+        resize: none;
+        border: solid 1.5px pink;
+        margin-top: 15px;
+    }
+
+    #sub {
+        width: 80px;
+        font-size: 20px;
+        background-color: #98bf21;
+        text-decoration: none;
+        color: #ffffff;
+        cursor: pointer;
+        border-radius: 4px;
+        /* 创造上下间距一定的空间 */
+        margin: 2px 0;
+    }
+
+    #sub:hover {
+        font-weight: bold;
+        color: black;
+    }
+</style>
+
+<body>
+    <div>
+        <div class="heading">
+            <img src="../images/homework.png" style="vertical-align:middle;padding:10px 30px;">管理系统
+            <a href="examine.html" class="a1"><span>返回首页</span></a>
+            <a href="#" class="a2"><span>注销登录</span></a>
+            <span style="float:right;">
+                <img src="../images/boy64px.png"
+                    style="vertical-align:middle;padding:10px 10px;width:50px;height:50px;border-radius: 50%;cursor: pointer;"
+                    title="您">
+            </span>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div class="header">菜单列表</div>
+                <div class="nav">
+                    <ul>
+                        <li class="nav-list">
+                            <h2>
+                                <img src="../images/person.png">
+                                基本信息
+                            </h2>
+                            <div class="hide">
+                                <h5><a href="examine.html"><i></i>个人信息</a></h5>
+                                <h5><a href="changepwd.html"><i></i>修改密码</a></h5>
+                                <h5><a href="changeinfor.html"><i></i>修改个人资料</a></h5>
+                            </div>
+                            <h2>
+                                <img src="../images/ho.png">
+                                作业情况
+                            </h2>
+                            <div class="hide">
+                                <h5><a href="#"><i></i>提交作业</a></h5>
+                                <h5><a href="#"><i></i>查看作业成绩</a></h5>
+                                <h5><a href="#"><i></i>查看老师布置作业</a></h5>
+                            </div>
+                            <h2>
+                                <img src="../images/teachers.png">
+                                交流
+                            </h2>
+                            <div class="hide">
+                                <h5><a href="#"><i></i>师生交流</a></h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="top">
+                    <a href="examine.html"><img src="../images/home.png">首页</a>
+                    &emsp;/
+                    <a href="submit_homework.html">提交作业</a>
+                    &emsp;/
+                    当前院校：
+                    <a href="http://web.fosu.edu.cn">佛山科学技术学院</a>
+                </div>
+                <div class="area">
+                    <p id="datetime"></p>
+                    <p style="text-align: center;font-size: 15px;line-height: 35px;">作业序列号：</p>
+                    <p style="text-align: center;font-size: 15px;line-height: 35px;">
+                        作业题目：编写一个JSP页面，利用JavaScript输出九九乘法表。
+                    </p>
+                    <form id="textform" name="textform" action="" method="POST">
+                        <p style="text-align: center;line-height: 40px;"><textarea class="text" form="textform"
+                                placeholder="请在此处填写"></textarea></p>
+                        <p style="text-align: center;"><input type="submit" value="提交" id="sub"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function time() {
+            var weeklist = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期天"];
+            var date = new Date();
+            var year = date.getFullYear(), month = date.getMonth() + 1, day = date.getDate(), hours = date.getHours(), minutes = date.getMinutes(), seconds = date.getSeconds(), week = date.getDay();
+            if ((seconds + '').length == 1) {
+                seconds = '0' + (seconds + '');
+            }
+            if ((minutes + '').length == 1) {
+                minutes = '0' + (minutes + '');
+            }
+            if ((hours + '').length == 1) {
+                hours = '0' + (hours + '');
+            }
+            document.getElementById("datetime").innerHTML = year + "年" + month + "月" + day + "日" + "\t" + hours + ":" + minutes + ":" + seconds + "\t" + weeklist[week];
+        }
+        setInterval("time()", 100);
+    </script>
+    <script src="../scripts/examine.js" async></script>
+</body>
+
+</html>
