@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>大数据作业管理系统</title>
+        <link href="../styles/changeinfor.css" rel="stylesheet" type="text/css">
+            
+        <link rel="shortcut icon" href="../images/country.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div>
+            <div class="heading">
+                <img src="../images/homework.png" style="vertical-align:middle;padding:10px 30px;">管理系统
+                <a href="examine-t.html" class="a1"><span>返回首页</span></a>
+                <a href="#" class="a2"><span>注销登录</span></a>
+                <span style="float:right;">
+                    <img src="../images/boy64px.png" style="vertical-align:middle;padding:10px 10px;width:50px;height:50px;border-radius: 50%;cursor: pointer;" title="您">
+                </span>
+            </div>
+            <div class="content">
+                <div class="menu">
+                    <div class="header">菜单列表</div>
+                    <div class="nav">
+                        <ul>
+                            <li class="nav-list">
+                                <h2>
+                                    <img src="../images/person.png">
+                                    基本信息
+                                </h2>
+                                <div class="hide">
+                                    <h5><a href="examine-t.html" ><i></i>个人信息</a></h5>
+                                    <h5><a href="changepwd-t.html" ><i></i>修改密码</a></h5>
+                                    <h5><a href="changeinfor-t.html" ><i></i>修改个人资料</a></h5>
+                                </div>
+                                <h2>
+                                    <img src="../images/ho.png">
+                                    作业情况
+                                </h2>
+                                <div class="hide">
+                                    <h5><a href="#" ><i></i>上传作业</a></h5>
+                                    <h5><a href="#" ><i></i>查看作业成绩</a></h5>
+                                    <h5><a href="#" ><i></i>查看学生作业</a></h5>
+                                </div>
+                                <h2>
+                                    <img src="../images/teachers.png">
+                                    交流
+                                </h2>
+                                <div class="hide">
+                                    <h5><a href="#" ><i></i>师生交流</a></h5>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="top">
+                        <a href="examine-t.html"><img src="../images/home.png">首页</a>
+                        &emsp;/
+                        <a href="changeinfor-t.html">修改个人资料</a>
+                        &emsp;/
+                        当前院校：
+                        <a href="http://web.fosu.edu.cn">佛山科学技术学院</a>
+                    </div>
+                    <div class="modify">
+                        <img src="../images/big-changepwd.png" class="image">
+                        <form method="POST" id="inforform" name="inforform">
+                            <p>姓名：<input type="text" placeholder="请输入姓名" class="name-sex"></p>
+                            <p>性别：<input type="text" placeholder="请输入性别" class="name-sex"></p>
+                            <br>
+                            <p style="text-align:center;">邮箱：<input type="text" placeholder="请输入邮箱" class="lastinput"></p>
+                            <p style="text-align:center;">电话：<input type="text" placeholder="请输入电话" class="lastinput"></p>
+                            
+                            <p><i>*学号：</i><input type="text" placeholder="请输入学号" class="lastinput"></p>
+                            <p style="text-align:center;"><button id="inforbtn">提交</button></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../scripts/examine.js" async></script>
+        <script>
+            /*修改个人资料的js*/ 
+            document.getElementById("inforbtn").onclick=function(){
+                var inputlist=document.querySelectorAll("#inforform input");
+                   //alert(inputlist.length);
+                   var num=0;
+                   for(var i=0;i<inputlist.length;i++){
+                       var v=inputlist[i].value;
+                       if(v.length==0){
+                           num++;
+                        }
+                    }
+                    if(num>0){
+                        alert("您有编辑框未输入!");
+                    }else{
+                        document.getElementById("inforform").submit();
+                    }
+            }
+        </script>
+    </body>
+</html>

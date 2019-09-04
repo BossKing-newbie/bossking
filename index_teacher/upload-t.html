@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>大数据作业管理系统</title>
+    <link href="../styles/examine.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../images/country.ico" type="image/x-icon">
+    <style>
+        .upload {
+            float: left;
+            width: 350px;
+            height: 400px;
+            border: 1px solid red;
+            background: white;
+            position: absolute;
+            top: 150px;
+            left: 450px;
+            filter: alpha(Opacity=80);
+            -moz-opacity: 0.8;
+            opacity: 0.8;
+        }
+
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 3px 25px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+
+        .upload .describe {
+            border: 1px solid #78C3F3;
+            height: 20px;
+            font-size: 15px;
+            width: 200px;
+        }
+
+        .finishtime {
+            width: 200px;
+
+            font-size: 15px;
+        }
+
+        #upload-btn {
+            text-align: center;
+            width: 80px;
+            height: 25px;
+            font-size: 15px;
+            text-decoration: none;
+            /* 创造上下间距一定的空间 */
+            margin: 2px 0;
+            /* border透明 (当鼠标悬停时上色) */
+            border: solid 1px transparent;
+            border-radius: 4px;
+            /* 确保字体颜色和背景色有足够区分度! */
+            color: #ffffff;
+            background-color: rgb(18, 128, 184);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="heading">
+            <img src="../images/homework.png" style="vertical-align:middle;padding:10px 30px;">管理系统
+            <a href="examine-t.html" class="a1"><span>返回首页</span></a>
+            <a href="#" class="a2"><span>注销登录</span></a>
+            <span style="float:right;">
+                <img src="../images/boy64px.png"
+                    style="vertical-align:middle;padding:10px 10px;width:50px;height:50px;border-radius: 50%;cursor: pointer;"
+                    title="您">
+            </span>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div class="header">菜单列表</div>
+                <div class="nav">
+                    <ul>
+                        <li class="nav-list">
+                            <h2>
+                                <img src="../images/person.png">
+                                基本信息
+                            </h2>
+                            <div class="hide">
+                                <h5><a href="examine-t.html"><i></i>个人信息</a></h5>
+                                <h5><a href="changepwd-t.html"><i></i>修改密码</a></h5>
+                                <h5><a href="changeinfor-t.html"><i></i>修改个人资料</a></h5>
+                            </div>
+                            <h2>
+                                <img src="../images/ho.png">
+                                作业情况
+                            </h2>
+                            <div class="hide">
+                                <h5><a href="#"><i></i>上传作业</a></h5>
+                                <h5><a href="#"><i></i>查看作业成绩</a></h5>
+                                <h5><a href="#"><i></i>查看学生作业</a></h5>
+                            </div>
+                            <h2>
+                                <img src="../images/teachers.png">
+                                交流
+                            </h2>
+                            <div class="hide">
+                                <h5><a href="#"><i></i>师生交流</a></h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="top">
+                    <a href="examine-t.html"><img src="../images/home.png">首页</a>
+                    &emsp;/
+                    <a href="examine-t.html">个人信息</a>
+                    &emsp;/
+                    当前院校：
+                    <a href="http://web.fosu.edu.cn">佛山科学技术学院</a>
+                </div>
+                <div class="upload">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <p style="text-align:center;">
+                            <img src="../images/upload.png">
+                        </p>
+                        <p style="text-align:center;line-height: 40px;">
+                            <input type="text" placeholder="作业序列号" class="describe" id="random">
+                        </p>
+                        <p style="text-align:center;line-height: 40px;">
+                            <input type="text" placeholder="请输入作业标题" class="describe" id="file-describe">
+                        </p>
+                        <p style="text-align:center;line-height: 40px;">
+                            <input type="text" placeholder="作业上传时间" class="describe" id="mytime">
+                        </p>
+                        <p style="text-align:center;line-height: 20px;">请指定学生作业完成时间</p>
+                        <p style="text-align:center;line-height: 40px;">
+                            <input type="datetime-local" class="finishtime" id="finishtime">
+                        </p>
+                        <p style="text-align:center;margin-top: 15px;margin-bottom:15px;">
+                            <a class="file">是否添加附件<input type="file" id="selectfile"></a>
+                            <input type="hidden" id="enclosure" value="no">
+                            <input type="hidden" id="filename" value="filename" name="filename">
+                        </p>
+                        <p style="text-align:center;line-height: 40px;">
+                            <button id="upload-btn">上传</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //生成序列号函数
+        function randomword() {
+            var str = "";
+            var arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+            var range = 15;
+            for (var i = 0; i < range; i++) {
+                pos = Math.round(Math.random() * (arr.length - 1));
+                str += arr[pos];
+            }
+            return str;
+        }
+        document.getElementById("random").onclick = function () {
+            var str = randomword();
+            document.getElementById("random").value = str;//序列号生成事件
+        }
+        document.getElementById("selectfile").onchange = function () {
+
+            document.getElementById("enclosure").value = 'yes';
+            console.log(document.getElementById("enclosure").value);
+            var f=document.getElementById("selectfile").files[0];
+            document.getElementById("filename").value=f.name;
+            console.log(document.getElementById("filename").value);
+        }
+        document.getElementById("upload-btn").onclick = function () {
+            if (document.getElementById("file-describe").value.length == 0) {
+                alert('请输入作业标题');
+            } else {
+                document.getElementById("uploadform").submit();
+            }
+
+        }
+        window.onload = function () {
+            var myDate = new Date(), Y = myDate.getFullYear(), M = myDate.getMonth() + 1, D = myDate.getDate();
+            //处理月是一位的情况
+            if ((M + '').length == 1) {
+                M = '0' + (M + '');
+            }
+            //处理日是一位的情况
+            if ((D + '').length == 1) {
+                D = '0' + (D + '')
+            }
+            var curDay = Y + '-' + M + '-' + D;
+            document.getElementById("mytime").value = curDay;
+            document.getElementById("finishtime").value = curDay + 'T00:00';
+        } 
+    </script>
+    <script src="../scripts/examine.js" async></script>
+</body>
+
+</html>
