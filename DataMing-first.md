@@ -1,5 +1,5 @@
 1.1 What is data mining? In your answer,address the following:<br>
-(a)Data mining is not an another hype.
+(a)Data mining is not an another hype.With the development of the times, the amount of data increases exponentially. Data mining requires knowledge of multiple interdisciplinary disciplines. Mining useful information from data is crucial for decision-making.
 (b)<br>
 (c)<br>
 1.2 How is a data warehouse different from a database?How are they similar? <br>
