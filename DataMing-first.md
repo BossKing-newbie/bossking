@@ -2,7 +2,7 @@
 (a)Data mining is not an another hype.With the development of the times, the amount of data increases exponentially. Data mining requires knowledge of multiple interdisciplinary disciplines. Mining useful information from data is crucial for decision-making.<br>
 (b)No,Data mining can be considered as a natural evolution of information technology and a confluence of several related discipilines and application domains.Data mining is more than a simpler transformation technology developed from databases, statistical data and machine learning.<br>
 (c)Data mining is the result of the evolution of many interdisciplinary disciplines. With the accumulation of data, simple data retrieval can no longer meet the growing needs of people. It is precisely because of this demand that people need a new technology to obtain useful information. At that time, the field of artificial intelligence had developed to a certain extent, and machine learning had reached a certain height. The combination of these two sciences promoted the development of data mining.<br>
-(d)Data mining steps are data cleaning，data integration,data selection,data transformation,data mining,pattern evaluation,knowledge presentation.
+(d)Data mining steps are data cleaning，data integration,data selection,data transformation,data mining,pattern evaluation,knowledge presentation.<br>
 1.2 How is a data warehouse different from a database?How are they similar? <br>
 By definition，A data warehouse is a repository of information collected from multiple sources,stored under a unified schema, and usually residing at a single site, <br>
 Data warehouse are constructed via a process of data cleaning, data integrarion, data transformation, data loading, and periodic data refreshing.<br>
