@@ -51,3 +51,4 @@ Today I study mysql should know and should understand!
 创建分组:分组是在SELECT语句的GROUP BY子句中建立的。
 例子：GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。
 GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。
+try to see the change!
