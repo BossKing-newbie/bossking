@@ -52,3 +52,4 @@ Today I study mysql should know and should understand!
 例子：GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。
 GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。
 try to see the change!
+更新了一点点！
